@@ -7,7 +7,7 @@ from langchain_community.document_loaders import WebBaseLoader
 
 def create_streamlit_app(llm,portfolio,clean_text):
  st.title("Email Generator")
- url_input=st.text_input("Enter a URL: ", value="https://careers.nike.com/principal-software-engineering-itc/job/R-73076")
+ url_input=st.text_input("Enter a URL: ", value="GIVEN_URL")
  submit_button=st.button("Submit")
 
  if submit_button:
@@ -30,5 +30,6 @@ if __name__ == "__main__":
     portfolio=Portfolio()
     st.set_page_config(layout="wide",page_title="Email Generator",page_icon="")
     create_streamlit_app(chain,portfolio,clean_text)
+
 
 
